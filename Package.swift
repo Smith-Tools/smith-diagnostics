@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "smith-core",
+    name: "sbdiagnostics",
     platforms: [.macOS(.v13), .iOS(.v16), .visionOS(.v1)],
     products: [
         .library(
-            name: "SmithCore",
-            targets: ["SmithCore"]
+            name: "SBDiagnostics",
+            targets: ["SBDiagnostics"]
         ),
     ],
     dependencies: [
@@ -17,14 +17,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SmithCore",
+            name: "SBDiagnostics",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         ),
         .testTarget(
-            name: "SmithCoreTests",
-            dependencies: ["SmithCore"]
+            name: "SBDiagnosticsTests",
+            dependencies: ["SBDiagnostics"]
         ),
     ]
 )
