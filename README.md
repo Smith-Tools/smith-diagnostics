@@ -1,145 +1,218 @@
-# smith-core - Universal Swift Patterns Library
+# SBDiagnostics
 
-> **Production-ready Swift patterns for modern development—independent of architecture, applicable across any Swift project.**
+Comprehensive build diagnostics engine for Swift projects with advanced hang detection, performance profiling, and intelligent optimization recommendations.
 
-Foundation library providing universal patterns, utilities, and best practices for Swift development. Part of the Smith Tools ecosystem but usable independently.
+## Overview
 
-## 🎯 What is smith-core?
+SBDiagnostics is a sophisticated diagnostics engine that goes far beyond basic build analysis. It detects hidden performance issues, validates architectural patterns, suggests fixes with confidence scoring, and identifies optimization opportunities with impact ratings. Built as the shared foundation for all Smith analysis tools.
 
-smith-core provides patterns and guidance applicable to **any Swift project**, not just TCA-based apps:
+## Features
 
-- **Dependency Injection** - @Dependency patterns and best practices
-- **Swift Concurrency** - async/await, @MainActor, Task patterns
-- **Modern Testing** - Swift Testing framework patterns
-- **Access Control** - Public API boundaries and transitive dependencies
-- **Type-Safe Error Handling** - Custom error types and recovery patterns
-- **Shared State** - @Shared, @SharedReader patterns
-- **Utilities** - Common helper functions and types
+- **Build Hang Detection**: Identify and diagnose builds that hang or stall
+- **Performance Profiling**: CPU, memory, disk I/O, and concurrency analysis
+- **Architectural Validation**: Validate TCA patterns, SwiftData usage, Swift Dependencies structure
+- **Auto-Fix Engine**: Intelligent suggestions with confidence scores and impact analysis
+- **Optimization Recommendations**: Impact-difficulty ratings for build optimizations
+- **Dependency Graph Analysis**: Build complete dependency graphs with circular dependency detection
+- **Xcode Build Parsing**: Advanced parsing of xcodebuild output
+- **Swift Build Parsing**: Deep analysis of Swift Package Manager build output
+- **Diagnostic Extraction**: Extract and structure diagnostics from build logs
 
-## 🚀 Quick Start
+## Architecture
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Smith-Tools/smith-core.git
-
-# Copy patterns directory to your project (or reference locally)
-cp -r smith-core/Patterns ~/YourProject/
-
-# Or integrate as a documentation reference
-ln -s $(pwd)/smith-core ~/Developer/smith-core
+```
+┌──────────────────────────────────────────┐
+│   Orchestration Layer                    │
+│   (Smith CLI, Domain Commands)           │
+└────────────────┬─────────────────────────┘
+                 │
+┌────────────────▼─────────────────────────┐
+│   Specialist Analysis Tools              │
+│   (sbparser, smith-xcsift, smith-spmsift)│
+└────────────────┬─────────────────────────┘
+                 │
+┌────────────────▼─────────────────────────┐
+│   SBDiagnostics (Diagnostics Engine)     │
+│   ├── HangDetector                       │
+│   ├── PerformanceProfiler                │
+│   ├── MacroValidator (TCA, SwiftData)    │
+│   ├── AutoFixEngine                      │
+│   ├── DependencyGraph                    │
+│   └── OptimizationAnalyzer               │
+└────────────────┬─────────────────────────┘
+                 │
+┌────────────────▼─────────────────────────┐
+│   Smith Foundation (Utilities)           │
+│   ├── Output Formatting                  │
+│   ├── Error Handling                     │
+│   └── Progress Tracking                  │
+└──────────────────────────────────────────┘
 ```
 
-### Usage
+## Usage
 
-**In your Swift code:**
-
-Reference the patterns from smith-core documentation:
+### As a Dependency
 
 ```swift
-// Example: Dependency Injection pattern (from smith-core)
-@DependencyClient
-struct NetworkClient {
-    var fetch: (String) -> AsyncThrowingStream<Data, Error> = { _ in
-        AsyncThrowingStream { continuation in
-            continuation.finish(throwing: CancellationError())
-        }
-    }
+// Package.swift
+dependencies: [
+    .package(path: "../sbdiagnostics"),
+]
+
+targets: [
+    .target(
+        name: "MyAnalyzer",
+        dependencies: [
+            .product(name: "SBDiagnostics", package: "sbdiagnostics"),
+        ]
+    ),
+]
+```
+
+### In Code
+
+```swift
+import SBDiagnostics
+
+// Detect build hangs
+let hangDetector = HangDetector()
+if let hang = hangDetector.analyzeLog(buildLog) {
+    print("Build hung at: \(hang.timestamp)")
 }
 
-// Example: Type-safe error handling
-enum AppError: Error {
-    case network(URLError)
-    case decoding(DecodingError)
-    case invalid(String)
+// Profile performance
+let profiler = PerformanceProfiler()
+let metrics = profiler.analyze(buildOutput)
+print("CPU time: \(metrics.cpuSeconds)s")
+print("Memory peak: \(metrics.peakMemoryMB)MB")
+
+// Validate architecture
+let validator = TCAValidator()
+let issues = validator.validate(sourceCode)
+issues.forEach { issue in
+    print("\(issue.severity): \(issue.message)")
 }
+
+// Get optimization suggestions
+let optimizer = OptimizationAnalyzer()
+let suggestions = optimizer.analyze(buildMetrics)
+for suggestion in suggestions {
+    print("💡 \(suggestion.title)")
+    print("   Impact: \(suggestion.impactScore)/10")
+    print("   Difficulty: \(suggestion.difficultyScore)/10")
+}
+
+// Analyze dependency graph
+let graphAnalyzer = DependencyGraph()
+let circulars = graphAnalyzer.findCircularDependencies(manifest)
+print("Found \(circulars.count) circular dependencies")
 ```
 
-## 📚 Pattern Documentation
+## Capabilities Deep Dive
 
-| Pattern | Purpose | When to Use |
-|---------|---------|------------|
-| **Dependency Injection** | Inject dependencies for testability | All new dependencies |
-| **Concurrency** | Safe async/await patterns | Network calls, long-running tasks |
-| **Error Handling** | Type-safe error types | Any error condition |
-| **Access Control** | Public API boundaries | When exposing library code |
-| **Shared State** | @Shared state management | Cross-module state |
-| **Testing** | Modern test patterns | All test code |
+### Build Hang Detection
+Automatically identifies builds that stall or hang indefinitely by monitoring:
+- Compilation progress stalling
+- I/O bottlenecks
+- Resource exhaustion
+- Process synchronization issues
 
-## 🔄 Integration with Other Smith Tools
+### Performance Profiling
+Comprehensive metrics including:
+- CPU time and thread utilization
+- Memory allocation patterns and peaks
+- Disk I/O patterns and hot paths
+- Concurrency characteristics
 
-smith-core works independently but integrates with the full Smith Tools ecosystem:
+### Architectural Validation
+Validates framework-specific patterns:
+- **TCA**: Action composition, dependency injection, effect handling
+- **SwiftData**: Model design, relationship configuration
+- **Swift Dependencies**: Dependency declaration and injection
 
-```
-smith-core       ← Universal patterns (used by everything)
-    ↓
-smith-skill      ← TCA-specific guidance (uses smith-core patterns)
-sosumi-skill     ← Apple documentation
-smith-sbsift     ← Build analysis
-smith-spmsift    ← SPM analysis
-```
+### Auto-Fix Engine
+Intelligent suggestions with:
+- Confidence scores (0-100%)
+- Before/after code examples
+- Risk assessment
+- Implementation difficulty estimates
 
-## 🛠️ Development
+### Optimization Recommendations
+Suggests improvements with:
+- Impact score (0-10): Expected performance improvement
+- Difficulty score (0-10): Implementation effort
+- Prerequisite knowledge required
+- Estimated time to implement
 
-### Building
+## Dependencies
 
-```bash
-# No special build needed—smith-core is documentation + example code
-# Just clone and reference the patterns
+SBDiagnostics depends on the Smith Foundation libraries:
+- **SmithOutputFormatter**: For formatted output
+- **SmithErrorHandling**: For error management
+- **SmithProgress**: For progress tracking
+- **ArgumentParser**: For CLI utilities
 
-git clone https://github.com/Smith-Tools/smith-core.git
-cd smith-core
+## Requirements
 
-# View pattern documentation
-ls *.md
-```
+- Swift 6.0+
+- macOS 13.0+
 
-### Project Structure
+## Integration Status
 
-```
-smith-core/
-├── README.md                 ← This file
-├── DEPENDENCY-INJECTION.md   ← @Dependency patterns
-├── CONCURRENCY.md            ← async/await patterns
-├── TESTING.md                ← Swift Testing patterns
-├── ERROR-HANDLING.md         ← Error type patterns
-├── ACCESS-CONTROL.md         ← Public API patterns
-├── SHARED-STATE.md           ← @Shared patterns
-├── Examples/                 ← Code examples
-└── Case Studies/             ← Real-world examples
-```
+**Core dependency for:**
+- **sbparser**: Used for structured build output parsing
+- **smith-xcsift**: Xcode-specific diagnostics
+- **smith-spmsift**: SPM-specific diagnostics
+- **Smith CLI**: Orchestration and unified interface
+- **smith-tca-trace**: TCA-specific tracing and validation
+- **smith-validation**: Architectural validation
 
-## 📋 Requirements
+## Key Components
 
-- **Swift 5.10+** (for async/await, structured concurrency)
-- **Xcode 15.0+** (for Swift Testing framework)
-- **macOS 12.0+, iOS 16.0+, visionOS 1.0+**
+### HangDetector
+Identifies builds that stall at various stages by analyzing execution traces and compilation logs.
 
-## 🔗 Related Components
+### PerformanceProfiler
+Extracts and analyzes CPU, memory, and I/O metrics from build output and system traces.
 
-- **[smith-skill](../smith-skill/)** - TCA-specific patterns and validators
-- **[sosumi-skill](../sosumi-skill/)** - Apple documentation + WWDC
-- **[smith-sbsift](../smith-sbsift/)** - Swift build analysis
-- **[smith-spmsift](../smith-spmsift/)** - Swift Package Manager analysis
+### MacroValidator
+Validates usage of complex Swift macros, particularly in framework code like TCA.
 
-## 🤝 Contributing
+### AutoFixEngine
+Generates intelligent fixes for detected issues with confidence scoring.
 
-Contributions welcome! Please:
+### DependencyGraph
+Builds and analyzes dependency relationships, detecting cycles and unused dependencies.
 
-1. Read existing pattern documentation first
-2. Test patterns on real projects before contributing
-3. Provide case studies with new patterns
-4. Follow the pattern template (see CONTRIBUTING.md)
-5. Reference Apple's official documentation
-6. Include before/after examples
+### OptimizationAnalyzer
+Suggests targeted build optimizations based on metrics and patterns found in builds.
 
-## 📄 License
+## Performance & Reliability
 
-MIT - See [LICENSE](LICENSE) for details
+SBDiagnostics is designed to be:
+- **Fast**: Streaming analysis without loading entire build logs into memory
+- **Accurate**: Multiple detection methods reduce false positives
+- **Practical**: Recommendations focus on achievable improvements
+- **Safe**: Confidence scoring on all suggestions prevents harmful changes
 
----
+## Best Practices
 
-**smith-core - Universal Swift patterns for production applications**
+1. Run diagnostics on clean builds for baseline comparison
+2. Compare before/after metrics after implementing suggestions
+3. Start with high-impact, low-difficulty optimizations
+4. Use hang detection early to catch stalling issues
+5. Validate architectural patterns regularly as code evolves
 
-*Last updated: November 17, 2025*
+## License
+
+MIT License - See LICENSE file for details
+
+## Related Projects
+
+- [sbparser](../sbparser) - Unified build output parser
+- [smith-xcsift](../smith-xcsift) - Xcode-specific analysis tool
+- [smith-spmsift](../smith-spmsift) - SPM-specific analysis tool
+- [smith-validation](../smith-validation) - TCA validation
+- [smith-tca-trace](../smith-tca-trace) - TCA performance tracing
+- [Smith CLI](../Smith/cli) - Unified command-line interface
+- [smith-foundation](../smith-foundation) - Foundation libraries
