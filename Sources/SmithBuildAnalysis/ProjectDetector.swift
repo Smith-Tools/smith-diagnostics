@@ -31,12 +31,12 @@ public struct ProjectDetector {
 
     public static func findWorkspaceFiles(in path: String) -> [String] {
         let url = URL(fileURLWithPath: path)
-        return findFiles(withExtension: "xcworkspace", in: url)
+        return findDirectories(withExtension: "xcworkspace", in: url)
     }
 
     public static func findProjectFiles(in path: String) -> [String] {
         let url = URL(fileURLWithPath: path)
-        return findFiles(withExtension: "xcodeproj", in: url)
+        return findDirectories(withExtension: "xcodeproj", in: url)
     }
 
     public static func findPackageFiles(in path: String) -> [String] {
@@ -44,9 +44,37 @@ public struct ProjectDetector {
         return findFiles(withName: "Package.swift", in: url)
     }
 
+    // MARK: - Directory Search
+
+    private static func findDirectories(withExtension fileExtension: String, in url: URL) -> [String] {
+        var result: [String] = []
+
+        guard let contents = try? FileManager.default.contentsOfDirectory(
+            at: url,
+            includingPropertiesForKeys: [.isDirectoryKey],
+            options: [.skipsHiddenFiles]
+        ) else {
+            return result
+        }
+
+        for itemURL in contents {
+            guard let resourceValues = try? itemURL.resourceValues(forKeys: [.isDirectoryKey]),
+                  let isDirectory = resourceValues.isDirectory,
+                  isDirectory else {
+                continue
+            }
+
+            if itemURL.pathExtension == fileExtension {
+                result.append(itemURL.path)
+            }
+        }
+
+        return result.sorted()
+    }
+
     // MARK: - Project Analysis
 
-    public static func analyzeProjectComplexity(at path: String) -> DependencyGraph? {
+    public static func analyzeProjectComplexity(at path: String) -> BuildDependencySummary? {
         let projectType = detectProjectType(at: path)
 
         switch projectType {
@@ -68,12 +96,22 @@ public struct ProjectDetector {
 
     private static func findWorkspace(at url: URL) -> String? {
         let workspaces = findFiles(withExtension: "xcworkspace", in: url)
-        return workspaces.first
+        if let fullPath = workspaces.first {
+            // Extract just the workspace name from the full path
+            let workspaceURL = URL(fileURLWithPath: fullPath)
+            return workspaceURL.deletingPathExtension().lastPathComponent
+        }
+        return nil
     }
 
     private static func findProject(at url: URL) -> String? {
         let projects = findFiles(withExtension: "xcodeproj", in: url)
-        return projects.first
+        if let fullPath = projects.first {
+            // Extract just the project name from the full path
+            let projectURL = URL(fileURLWithPath: fullPath)
+            return projectURL.deletingPathExtension().lastPathComponent
+        }
+        return nil
     }
 
     private static func findFiles(withExtension fileExtension: String, in url: URL) -> [String] {
@@ -125,10 +163,10 @@ public struct ProjectDetector {
         return result.sorted()
     }
 
-    private static func analyzeSPMComplexity(at path: String) -> DependencyGraph {
+    private static func analyzeSPMComplexity(at path: String) -> BuildDependencySummary {
         // This would integrate with smith-spmsift
         // For now, return basic analysis
-        return DependencyGraph(
+        return BuildDependencySummary(
             targetCount: 0,
             maxDepth: 0,
             circularDeps: false,
@@ -136,10 +174,10 @@ public struct ProjectDetector {
         )
     }
 
-    private static func analyzeXcodeComplexity(at path: String) -> DependencyGraph {
+    private static func analyzeXcodeComplexity(at path: String) -> BuildDependencySummary {
         // This would integrate with smith-xcsift
         // For now, return basic analysis
-        return DependencyGraph(
+        return BuildDependencySummary(
             targetCount: 0,
             maxDepth: 0,
             circularDeps: false,

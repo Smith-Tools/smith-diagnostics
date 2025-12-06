@@ -49,7 +49,7 @@ public struct BuildPhase: Codable {
 
 // MARK: - Dependency Graph
 
-public struct DependencyGraph: Codable {
+public struct BuildDependencySummary: Codable {
     public let targetCount: Int
     public let maxDepth: Int
     public let circularDeps: Bool
@@ -197,12 +197,12 @@ public struct BuildAnalysis: Codable {
     public let projectType: ProjectType
     public let status: BuildStatus
     public let phases: [BuildPhase]
-    public let dependencyGraph: DependencyGraph
+    public let dependencyGraph: BuildDependencySummary
     public let metrics: BuildMetrics
     public let diagnostics: [Diagnostic]
     public let timestamp: Date
 
-    public init(projectType: ProjectType, status: BuildStatus, phases: [BuildPhase] = [], dependencyGraph: DependencyGraph, metrics: BuildMetrics = BuildMetrics(), diagnostics: [Diagnostic] = []) {
+    public init(projectType: ProjectType, status: BuildStatus, phases: [BuildPhase] = [], dependencyGraph: BuildDependencySummary, metrics: BuildMetrics = BuildMetrics(), diagnostics: [Diagnostic] = []) {
         self.projectType = projectType
         self.status = status
         self.phases = phases

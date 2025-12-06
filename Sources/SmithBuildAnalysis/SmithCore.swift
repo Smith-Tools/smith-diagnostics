@@ -15,7 +15,7 @@ public struct SmithCore {
     /// Perform a quick analysis of a project directory
     public static func quickAnalyze(at path: String) -> BuildAnalysis {
         let projectType = ProjectDetector.detectProjectType(at: path)
-        let dependencyGraph = DependencyGraph(
+        let dependencyGraph = BuildDependencySummary(
             targetCount: 0,
             maxDepth: 0,
             circularDeps: false,
@@ -136,7 +136,7 @@ extension BuildAnalysis {
     }
 }
 
-extension DependencyGraph {
+extension BuildDependencySummary {
     /// Get human-readable complexity description
     public var complexityDescription: String {
         switch complexity {
