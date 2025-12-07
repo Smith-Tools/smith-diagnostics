@@ -33,7 +33,7 @@ public struct SmithCore {
 
     /// Get human-readable summary of analysis results
     public static func summarize(_ analysis: BuildAnalysis) -> String {
-        return SmithOutputFormatter.formatSummary(
+        return BuildOutputFormatter.formatSummary(
             BuildResult(
                 analysis: analysis,
                 summary: ""
@@ -43,12 +43,12 @@ public struct SmithCore {
 
     /// Format analysis as human-readable text
     public static func formatHumanReadable(_ analysis: BuildAnalysis) -> String {
-        return SmithOutputFormatter.formatHumanReadable(analysis)
+        return BuildOutputFormatter.formatHumanReadable(analysis)
     }
 
     /// Format analysis as JSON
     public static func formatJSON(_ analysis: BuildAnalysis) -> Data? {
-        return SmithOutputFormatter.formatAnalysis(analysis)
+        return BuildOutputFormatter.formatAnalysis(analysis)
     }
 
     /// Check if a project is likely to have build issues

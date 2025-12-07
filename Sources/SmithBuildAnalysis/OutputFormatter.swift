@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Output Formatter
 
-public struct SmithOutputFormatter {
+public struct BuildOutputFormatter {
 
     // MARK: - JSON Formatting
 
