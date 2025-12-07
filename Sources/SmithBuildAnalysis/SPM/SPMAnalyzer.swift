@@ -6,6 +6,7 @@ public struct SPMAnalyzer {
     private let resolvedParser = PackageResolvedParser()
     private let conflictDetector = PackageConflictDetector()
     private let outdatedAnalyzer = OutdatedPackageAnalyzer()
+    private let importAnalyzer = ImportAnalyzer()
 
     public init() {}
 
@@ -53,6 +54,47 @@ public struct SPMAnalyzer {
                 dependencies: dependencies
             )
 
+            // Analyze imports for each dependency
+            let importMetrics = importAnalyzer.analyzeImports(
+                at: path,
+                for: analysis.external
+            )
+
+            // Update dependencies with import counts
+            var updatedExternalDeps = analysis.external
+            for index in updatedExternalDeps.indices {
+                let depName = updatedExternalDeps[index].name
+                if let metrics = importMetrics[depName] {
+                    updatedExternalDeps[index].importCount = metrics.totalImports
+                }
+            }
+
+            // Build dependency graph for ranking
+            let dependencyGraph = buildDependencyGraph(from: updatedExternalDeps)
+
+            // Rank dependencies by relevance
+            let ranker = DependencyRanker(
+                importMetrics: importMetrics,
+                graph: dependencyGraph
+            )
+            let ranked = ranker.rankDependencies(updatedExternalDeps)
+
+            // Update dependencies with relevance scores
+            for index in updatedExternalDeps.indices {
+                let depName = updatedExternalDeps[index].name
+                if let rank = ranked.first(where: { $0.packageName == depName }) {
+                    updatedExternalDeps[index].relevanceScore = rank.score
+                }
+            }
+
+            let updatedAnalysis = SPMDependencyAnalysis(
+                count: analysis.count,
+                external: updatedExternalDeps,
+                local: analysis.local,
+                circularImports: analysis.circularImports,
+                versionConflicts: analysis.versionConflicts
+            )
+
             // Combine issues
             var allIssues = analysis.versionConflicts.map { conflict in
                 SPMPackageIssue(
@@ -73,7 +115,7 @@ public struct SPMAnalyzer {
             return SPMPackageAnalysis(
                 command: .showDependencies,
                 success: allIssues.isEmpty,
-                dependencies: analysis,
+                dependencies: updatedAnalysis,
                 issues: allIssues
             )
         } catch {
@@ -154,7 +196,14 @@ public struct SPMAnalyzer {
             output += "├─ External: \(deps.external.count)\n"
 
             for ext in deps.external.prefix(10) {
-                output += "│  ├─ \(ext.name)@\(ext.version)\n"
+                var depInfo = "│  ├─ \(ext.name)@\(ext.version)"
+                if let importCount = ext.importCount {
+                    depInfo += " (imports: \(importCount))"
+                }
+                if let score = ext.relevanceScore {
+                    depInfo += " [score: \(String(format: "%.1f", score))]"
+                }
+                output += "\(depInfo)\n"
             }
             if deps.external.count > 10 {
                 output += "│  └─ ... and \(deps.external.count - 10) more\n"
@@ -179,5 +228,35 @@ public struct SPMAnalyzer {
 
         output += "\n═══════════════════════════════════════\n"
         return output
+    }
+
+    /// Build a dependency graph from external dependencies
+    /// - Parameter dependencies: List of external dependencies
+    /// - Returns: DependencyGraph representing the relationships
+    private func buildDependencyGraph(from dependencies: [SPMExternalDependency]) -> DependencyGraph {
+        var nodes: [DependencyNode] = []
+        var edges: [DependencyEdge] = []
+
+        // Create nodes for each dependency
+        for dependency in dependencies {
+            let node = DependencyNode(
+                id: dependency.name,
+                name: dependency.name,
+                version: dependency.version,
+                type: .package,
+                metadata: ["type": "external"]
+            )
+            nodes.append(node)
+        }
+
+        // For now, create a simple graph where all are root nodes
+        // In a real implementation, we would parse the actual dependency tree
+        // to establish the relationships
+
+        return DependencyGraph(
+            nodes: nodes,
+            edges: edges,
+            metadata: ["source": "SPMAnalyzer"]
+        )
     }
 }

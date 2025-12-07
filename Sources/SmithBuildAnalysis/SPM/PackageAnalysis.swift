@@ -97,6 +97,8 @@ public struct SPMExternalDependency: Codable {
     public let version: String
     public let type: SPMDependencySource
     public let url: String?
+    public internal(set) var importCount: Int?
+    public internal(set) var relevanceScore: Double?
 
     public init(name: String, version: String, type: SPMDependencySource, url: String? = nil) {
         self.name = name
