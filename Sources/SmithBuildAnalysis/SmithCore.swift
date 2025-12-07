@@ -107,9 +107,9 @@ public struct SmithCore {
     public static func getRecommendedApproach(for projectType: ProjectType) -> String {
         switch projectType {
         case .spm:
-            return "Use smith-spmsift for package analysis, smith-sbsift for build analysis"
+            return "Use 'smith spm analyze' for package analysis and dependency management"
         case .xcodeWorkspace, .xcodeProject:
-            return "Use smith-xcsift for comprehensive build analysis, smith-spmsift for SPM modules"
+            return "Use 'smith xcode analyze' for comprehensive build analysis and optimization"
         case .unknown:
             return "Unable to determine project type, check if it's a valid Swift/iOS project"
         }

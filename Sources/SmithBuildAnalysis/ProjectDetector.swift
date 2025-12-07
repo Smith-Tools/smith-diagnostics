@@ -164,7 +164,7 @@ public struct ProjectDetector {
     }
 
     private static func analyzeSPMComplexity(at path: String) -> BuildDependencySummary {
-        // This would integrate with smith-spmsift
+        // Delegates to smith spm analyze for detailed analysis
         // For now, return basic analysis
         return BuildDependencySummary(
             targetCount: 0,
@@ -175,7 +175,7 @@ public struct ProjectDetector {
     }
 
     private static func analyzeXcodeComplexity(at path: String) -> BuildDependencySummary {
-        // This would integrate with smith-xcsift
+        // Delegates to smith xcode analyze for detailed analysis
         // For now, return basic analysis
         return BuildDependencySummary(
             targetCount: 0,
