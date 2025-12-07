@@ -347,8 +347,6 @@ let docs = spmAnalyzer.discoverDocumentation(
 ## Related Projects
 
 - [smith-parser](../smith-parser) - Unified build output parser
-- [smith-xcsift](../smith-xcsift) - Xcode-specific analysis tool
-- [smith-spmsift](../smith-spmsift) - SPM-specific analysis tool
 - [smith-validation](../smith-validation) - TCA validation
 - [smith-tca-trace](../smith-tca-trace) - TCA performance tracing
 - [Smith CLI](../Smith/cli) - Unified command-line interface
