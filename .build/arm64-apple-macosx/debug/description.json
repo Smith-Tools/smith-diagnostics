@@ -330,7 +330,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -914,7 +913,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -1254,7 +1252,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -1352,7 +1349,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -1571,7 +1567,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -1789,7 +1784,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx14.0",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -1877,7 +1871,7 @@
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithErrorHandling/Sources/SmithErrorHandling/SmithErrorHandling.swift"
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithErrorHandling/SmithErrorHandling.swift"
         },
         {
           "kind" : "file",
@@ -1897,7 +1891,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx12.0",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -1918,7 +1911,7 @@
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithErrorHandling.build/include/SmithErrorHandling-Swift.h",
         "-color-diagnostics",
         "-swift-version",
-        "5",
+        "6",
         "-plugin-path",
         "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
         "-sdk",
@@ -1949,7 +1942,7 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "smitherrorhandling"
+        "smith_foundation"
       ],
       "outputFileMapPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithErrorHandling.build/output-file-map.json",
       "outputs" : [
@@ -1964,7 +1957,7 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithErrorHandling/Sources/SmithErrorHandling/SmithErrorHandling.swift"
+        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithErrorHandling/SmithErrorHandling.swift"
       ],
       "tempsPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithErrorHandling.build",
       "wholeModuleOptimization" : false
@@ -1976,7 +1969,7 @@
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithOutputFormatter/Sources/SmithOutputFormatter/SmithOutputFormatter.swift"
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithOutputFormatter/SmithOutputFormatter.swift"
         },
         {
           "kind" : "file",
@@ -1996,7 +1989,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx12.0",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -2017,7 +2009,7 @@
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithOutputFormatter.build/include/SmithOutputFormatter-Swift.h",
         "-color-diagnostics",
         "-swift-version",
-        "5",
+        "6",
         "-plugin-path",
         "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
         "-sdk",
@@ -2048,7 +2040,7 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "smithoutputformatter"
+        "smith_foundation"
       ],
       "outputFileMapPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithOutputFormatter.build/output-file-map.json",
       "outputs" : [
@@ -2063,7 +2055,7 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithOutputFormatter/Sources/SmithOutputFormatter/SmithOutputFormatter.swift"
+        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithOutputFormatter/SmithOutputFormatter.swift"
       ],
       "tempsPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithOutputFormatter.build",
       "wholeModuleOptimization" : false
@@ -2075,7 +2067,7 @@
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress/Sources/SmithProgress/SmithProgress.swift"
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithProgress/SmithProgress.swift"
         },
         {
           "kind" : "file",
@@ -2095,7 +2087,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx12.0",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -2116,7 +2107,7 @@
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/include/SmithProgress-Swift.h",
         "-color-diagnostics",
         "-swift-version",
-        "5",
+        "6",
         "-plugin-path",
         "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
         "-sdk",
@@ -2147,7 +2138,7 @@
         "-Xcc",
         "-g",
         "-package-name",
-        "smithprogress"
+        "smith_foundation"
       ],
       "outputFileMapPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/output-file-map.json",
       "outputs" : [
@@ -2162,7 +2153,7 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress/Sources/SmithProgress/SmithProgress.swift"
+        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithProgress/SmithProgress.swift"
       ],
       "tempsPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build",
       "wholeModuleOptimization" : false
@@ -2212,7 +2203,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -2338,7 +2328,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -2599,7 +2588,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -2995,7 +2983,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx10.13",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -3242,7 +3229,6 @@
       "otherArguments" : [
         "-target",
         "arm64-apple-macosx13.0",
-        "-v",
         "-incremental",
         "-enable-batch-mode",
         "-serialize-diagnostics",
@@ -3377,7 +3363,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx10.13",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3444,7 +3429,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules-tool",
       "-target",
       "arm64-apple-macosx10.13",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3532,7 +3516,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx13.0",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3602,7 +3585,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx14.0",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3662,14 +3644,13 @@
       "-module-name",
       "SmithErrorHandling",
       "-package-name",
-      "smitherrorhandling",
+      "smith_foundation",
       "-c",
-      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithErrorHandling/Sources/SmithErrorHandling/SmithErrorHandling.swift",
+      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithErrorHandling/SmithErrorHandling.swift",
       "-I",
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx12.0",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3690,7 +3671,7 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithErrorHandling.build/include/SmithErrorHandling-Swift.h",
       "-color-diagnostics",
       "-swift-version",
-      "5",
+      "6",
       "-plugin-path",
       "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
       "-sdk",
@@ -3721,7 +3702,7 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "smitherrorhandling",
+      "smith_foundation",
       "-driver-use-frontend-path",
       "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
@@ -3730,14 +3711,13 @@
       "-module-name",
       "SmithOutputFormatter",
       "-package-name",
-      "smithoutputformatter",
+      "smith_foundation",
       "-c",
-      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithOutputFormatter/Sources/SmithOutputFormatter/SmithOutputFormatter.swift",
+      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithOutputFormatter/SmithOutputFormatter.swift",
       "-I",
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx12.0",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3758,7 +3738,7 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithOutputFormatter.build/include/SmithOutputFormatter-Swift.h",
       "-color-diagnostics",
       "-swift-version",
-      "5",
+      "6",
       "-plugin-path",
       "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
       "-sdk",
@@ -3789,7 +3769,7 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "smithoutputformatter",
+      "smith_foundation",
       "-driver-use-frontend-path",
       "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
@@ -3798,14 +3778,13 @@
       "-module-name",
       "SmithProgress",
       "-package-name",
-      "smithprogress",
+      "smith_foundation",
       "-c",
-      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress/Sources/SmithProgress/SmithProgress.swift",
+      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithProgress/SmithProgress.swift",
       "-I",
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx12.0",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3826,7 +3805,7 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/include/SmithProgress-Swift.h",
       "-color-diagnostics",
       "-swift-version",
-      "5",
+      "6",
       "-plugin-path",
       "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
       "-sdk",
@@ -3857,7 +3836,7 @@
       "-Xcc",
       "-g",
       "-package-name",
-      "smithprogress",
+      "smith_foundation",
       "-driver-use-frontend-path",
       "/Applications/Xcode-26.1.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
     ],
@@ -3873,7 +3852,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules-tool",
       "-target",
       "arm64-apple-macosx10.13",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -3967,7 +3945,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules-tool",
       "-target",
       "arm64-apple-macosx10.13",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -4034,7 +4011,6 @@
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
       "-target",
       "arm64-apple-macosx13.0",
-      "-v",
       "-incremental",
       "-enable-batch-mode",
       "-serialize-diagnostics",
@@ -4731,7 +4707,7 @@
         },
         {
           "kind" : "file",
-          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithErrorHandling/Sources/SmithErrorHandling/SmithErrorHandling.swift"
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithErrorHandling/SmithErrorHandling.swift"
         }
       ],
       "outputFilePath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithErrorHandling.build/sources"
@@ -4745,7 +4721,7 @@
         },
         {
           "kind" : "file",
-          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithOutputFormatter/Sources/SmithOutputFormatter/SmithOutputFormatter.swift"
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithOutputFormatter/SmithOutputFormatter.swift"
         }
       ],
       "outputFilePath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithOutputFormatter.build/sources"
@@ -4759,7 +4735,7 @@
         },
         {
           "kind" : "file",
-          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress/Sources/SmithProgress/SmithProgress.swift"
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithProgress/SmithProgress.swift"
         }
       ],
       "outputFilePath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/sources"

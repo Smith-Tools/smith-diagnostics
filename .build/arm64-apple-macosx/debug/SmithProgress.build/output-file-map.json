@@ -2,7 +2,7 @@
   "": {
     "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/master.swiftdeps"
   },
-  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress/Sources/SmithProgress/SmithProgress.swift": {
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/Sources/SmithProgress/SmithProgress.swift": {
     "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/SmithProgress.d",
     "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/SmithProgress.swift.o",
     "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/SmithProgress~partial.swiftmodule",
