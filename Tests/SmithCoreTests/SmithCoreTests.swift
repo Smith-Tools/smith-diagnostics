@@ -1,5 +1,5 @@
 import XCTest
-@testable import SmithCore
+@testable import SmithBuildAnalysis
 
 final class SmithCoreTests: XCTestCase {
 
@@ -16,22 +16,22 @@ final class SmithCoreTests: XCTestCase {
 
     func testDependencyGraphComplexity() {
         // Test complexity calculation
-        let lowComplexity = DependencyGraph.calculateComplexity(targetCount: 5, maxDepth: 2)
+        let lowComplexity = BuildDependencySummary.calculateComplexity(targetCount: 5, maxDepth: 2)
         XCTAssertEqual(lowComplexity, .low)
 
-        let mediumComplexity = DependencyGraph.calculateComplexity(targetCount: 25, maxDepth: 4)
+        let mediumComplexity = BuildDependencySummary.calculateComplexity(targetCount: 25, maxDepth: 4)
         XCTAssertEqual(mediumComplexity, .medium)
 
-        let highComplexity = DependencyGraph.calculateComplexity(targetCount: 75, maxDepth: 7)
+        let highComplexity = BuildDependencySummary.calculateComplexity(targetCount: 75, maxDepth: 7)
         XCTAssertEqual(highComplexity, .high)
 
-        let extremeComplexity = DependencyGraph.calculateComplexity(targetCount: 150, maxDepth: 10)
+        let extremeComplexity = BuildDependencySummary.calculateComplexity(targetCount: 150, maxDepth: 10)
         XCTAssertEqual(extremeComplexity, .extreme)
     }
 
     func testBuildAnalysisCreation() {
         let projectType = ProjectType.xcodeWorkspace(workspace: "Test.xcworkspace")
-        let dependencyGraph = DependencyGraph(
+        let dependencyGraph = BuildDependencySummary(
             targetCount: 10,
             maxDepth: 3,
             circularDeps: false,
@@ -70,7 +70,7 @@ final class SmithCoreTests: XCTestCase {
         let analysis = BuildAnalysis(
             projectType: .spm,
             status: .success,
-            dependencyGraph: DependencyGraph(
+            dependencyGraph: BuildDependencySummary(
                 targetCount: 5,
                 maxDepth: 2,
                 circularDeps: false,
@@ -99,7 +99,7 @@ final class SmithCoreTests: XCTestCase {
         let analysis = BuildAnalysis(
             projectType: .xcodeProject(project: "Test.xcodeproj"),
             status: .failed,
-            dependencyGraph: DependencyGraph(
+            dependencyGraph: BuildDependencySummary(
                 targetCount: 25,
                 maxDepth: 5,
                 circularDeps: true,
@@ -131,7 +131,7 @@ final class SmithCoreTests: XCTestCase {
         let lowRisk = BuildAnalysis(
             projectType: .spm,
             status: .success,
-            dependencyGraph: DependencyGraph(
+            dependencyGraph: BuildDependencySummary(
                 targetCount: 5,
                 maxDepth: 2,
                 circularDeps: false,
@@ -145,7 +145,7 @@ final class SmithCoreTests: XCTestCase {
         let highRisk = BuildAnalysis(
             projectType: .xcodeWorkspace(workspace: "Complex.xcworkspace"),
             status: .failed,
-            dependencyGraph: DependencyGraph(
+            dependencyGraph: BuildDependencySummary(
                 targetCount: 150,
                 maxDepth: 10,
                 circularDeps: true,
@@ -158,7 +158,7 @@ final class SmithCoreTests: XCTestCase {
     }
 
     func testDependencyGraphRecommendations() {
-        let complexGraph = DependencyGraph(
+        let complexGraph = BuildDependencySummary(
             targetCount: 120,
             maxDepth: 8,
             circularDeps: true,

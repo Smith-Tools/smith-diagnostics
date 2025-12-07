@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith_diagnosticsPackageTests.build/master.swiftdeps"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith-diagnosticsPackageTests.derived/runner.swift": {
+    "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith_diagnosticsPackageTests.build/runner.d",
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith_diagnosticsPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith_diagnosticsPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith_diagnosticsPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/smith_diagnosticsPackageTests.build/runner.dia"
+  }
+}

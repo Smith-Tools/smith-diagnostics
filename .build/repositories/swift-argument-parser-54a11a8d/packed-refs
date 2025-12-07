@@ -25,6 +25,8 @@ e394bf350e38cb100b6bc4172834770ede1b7232 refs/heads/release/1.0.3
 309a47b2b1d9b5e991f36961c983ecec72275be3 refs/heads/release/1.6.1
 cdd0ef3755280949551dc26dee5de9ddeda89f54 refs/heads/release/1.6.2
 af1be50a9365f849e5cf289ff82afcd97af5fe2a refs/heads/standardized-docs
+2316d12697c47ada440d7d8dc62ee12bddc1c252 refs/heads/t/main/gh829_add_new_argument_type_FlagOption
+850c1bdb6ebbdc50f1b2f58d8ff828815ca481a8 refs/heads/user/dickoff/help-search-functionality
 5177e0bce7659700fd15c0b933e347a231ad6b5d refs/pull/10/head
 b108ee20fcf8027c68c55c1cbd3a7b44597d4200 refs/pull/101/head
 e13cfdae3d618ea44a52214945930e35a7cc0dcd refs/pull/102/head
@@ -128,7 +130,6 @@ d4d2fc29fdf2ce8646c28f0d85972fe531a867a7 refs/pull/240/head
 7f4fb092a5a1da18e2dc9aa82beb0d2f4327554f refs/pull/245/head
 124de2d6a8a6807f23570b6bd772ed5db10bfc34 refs/pull/246/head
 0ceed804cde1e8f7e3fa153e0aab5c2060fb74e2 refs/pull/247/head
-3c0431c88d972ab92c4eb13505339546a58bc54d refs/pull/247/merge
 12c967ee5bca80acda81c70b9986fe010b9d3215 refs/pull/249/head
 7c9747399257d9bb7f2075e72bc9003dfa91d47a refs/pull/250/head
 c3be971b30c4581a58168b508b0766249f4fb1b8 refs/pull/251/head
@@ -547,6 +548,10 @@ f4130e123ddd0a7fbc5b696ecad352ec32ef5478 refs/pull/823/head
 e70beb03229ed442633b955052ef38f2a90fa2f5 refs/pull/826/head
 4ee8baf639b70c1120c281d4d58b89bd9ef2938e refs/pull/828/head
 dd14a91db648de0874530b9d91ff92df20d60962 refs/pull/83/head
+2316d12697c47ada440d7d8dc62ee12bddc1c252 refs/pull/830/head
+c31dd912c6e81b6ac2daf094060e4b4b556c5344 refs/pull/830/merge
+850c1bdb6ebbdc50f1b2f58d8ff828815ca481a8 refs/pull/832/head
+9008eb15eb2cb0393609e3a54e5d2ba3c56b3a5c refs/pull/832/merge
 5a6a00497a2b029b4609d823530604dc8318bf04 refs/pull/86/head
 df27fa79134783bc471c0da78ce6f285476211a1 refs/pull/89/head
 f83b3d374f845da80a0ace9c8acc59a51c0e9cf3 refs/pull/9/head

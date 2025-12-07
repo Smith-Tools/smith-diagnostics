@@ -1,0 +1,3 @@
+module SBDiagnostics {
+    header "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnostics.build/include/SBDiagnostics-Swift.h"
+}

@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "sbdiagnostics",
+    name: "smith-diagnostics",
     platforms: [.macOS(.v13), .iOS(.v16), .visionOS(.v1)],
     products: [
         .library(

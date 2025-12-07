@@ -1,12 +1,12 @@
 {
   "": {
-    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/master.swiftdeps"
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/master.swiftdeps"
   },
-  "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/checkouts/swift-argument-parser/Sources/ArgumentParserToolInfo/ToolInfo.swift": {
-    "dependencies": "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.d",
-    "object": "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.swift.o",
-    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo~partial.swiftmodule",
-    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.swiftdeps",
-    "diagnostics": "/Volumes/Plutonian/_Developer/Smith Tools/smith-core/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.dia"
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/checkouts/swift-argument-parser/Sources/ArgumentParserToolInfo/ToolInfo.swift": {
+    "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.d",
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/ArgumentParserToolInfo.build/ToolInfo.dia"
   }
 }

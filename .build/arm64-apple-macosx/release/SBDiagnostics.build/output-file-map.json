@@ -1,0 +1,139 @@
+{
+  "": {
+    "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SBDiagnostics.d",
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SBDiagnostics.o",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/master.swiftdeps"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/AutoFixEngine.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/AutoFixEngine.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/AutoFixEngine~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/AutoFixEngine.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/AutoFixEngine.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/BuildDiagnostics.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/BuildDiagnostics.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/BuildDiagnostics~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/BuildDiagnostics.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/BuildDiagnostics.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/DependencyGraph.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyGraph.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyGraph~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyGraph.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyGraph.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/Formatters/DependencyFormatter.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyFormatter.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyFormatter~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyFormatter.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyFormatter.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/HangDetector.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/HangDetector.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/HangDetector~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/HangDetector.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/HangDetector.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/Models.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/Models.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/Models.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/Models.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/OutputFormatter.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutputFormatter.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutputFormatter~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutputFormatter.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutputFormatter.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/ProjectDetector.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ProjectDetector.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ProjectDetector~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ProjectDetector.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ProjectDetector.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/DependencyRanker.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyRanker.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyRanker~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyRanker.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/DependencyRanker.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/ImportAnalyzer.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ImportAnalyzer.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ImportAnalyzer~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ImportAnalyzer.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ImportAnalyzer.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/OutdatedPackageAnalyzer.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutdatedPackageAnalyzer.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutdatedPackageAnalyzer~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutdatedPackageAnalyzer.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/OutdatedPackageAnalyzer.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/PackageAnalysis.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageAnalysis.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageAnalysis~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageAnalysis.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageAnalysis.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/PackageConflictDetector.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageConflictDetector.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageConflictDetector~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageConflictDetector.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageConflictDetector.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/PackageResolvedParser.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageResolvedParser.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageResolvedParser~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageResolvedParser.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PackageResolvedParser.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/SPMAnalyzer.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SPMAnalyzer.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SPMAnalyzer~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SPMAnalyzer.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SPMAnalyzer.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SPM/ShowDependenciesParser.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ShowDependenciesParser.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ShowDependenciesParser~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ShowDependenciesParser.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/ShowDependenciesParser.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SharedMonitor.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SharedMonitor.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SharedMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SharedMonitor.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SharedMonitor.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SmithCore.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SmithCore.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SmithCore~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SmithCore.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SmithCore.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/SyntaxValidators.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SyntaxValidators.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SyntaxValidators~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SyntaxValidators.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/SyntaxValidators.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/Xcode/PbxprojParser.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PbxprojParser.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PbxprojParser~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PbxprojParser.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/PbxprojParser.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/Xcode/TargetDependencyGraph.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/TargetDependencyGraph.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/TargetDependencyGraph~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/TargetDependencyGraph.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/TargetDependencyGraph.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Sources/SmithBuildAnalysis/Xcode/XcodeDependencyAnalyzer.swift": {
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/XcodeDependencyAnalyzer.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/XcodeDependencyAnalyzer~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/XcodeDependencyAnalyzer.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/release/SBDiagnostics.build/XcodeDependencyAnalyzer.dia"
+  }
+}

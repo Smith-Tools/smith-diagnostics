@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/master.swiftdeps"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/DependencyFormatterTests.swift": {
+    "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.d",
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.dia"
+  },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/SmithCoreTests.swift": {
+    "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.d",
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.dia"
+  }
+}
