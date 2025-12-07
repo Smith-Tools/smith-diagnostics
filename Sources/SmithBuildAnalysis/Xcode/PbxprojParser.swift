@@ -109,13 +109,15 @@ public struct PbxprojParser {
     private func parseSections(_ content: String, matching sectionType: String) -> [String: String] {
         var sections: [String: String] = [:]
 
-        let pattern = #"(\w+)\s*\/\*\s*\*\/\s*=\s*\{[^}]*isa\s*=\s*(\#(sectionType));"#
+        // Regex to find sections: ID /* Comment */ = { isa = SectionType; ... };
+        // Fixed pattern to allow content inside /* */ comments
+        let pattern = #"(\w+)\s*\/\*.*?\*\/\s*=\s*\{[^}]*isa\s*=\s*(\#(sectionType));"#
         let regex = try? NSRegularExpression(pattern: pattern, options: [.dotMatchesLineSeparators])
 
         let matches = regex?.matches(
             in: content,
             options: [],
-            range: NSRange(location: 0, length: content.utf8.count)
+            range: NSRange(content.startIndex..<content.endIndex, in: content)
         ) ?? []
 
         for match in matches {
@@ -221,7 +223,7 @@ public struct PbxprojParser {
         let matches = regex?.matches(
             in: depsContent,
             options: [],
-            range: NSRange(location: 0, length: depsContent.utf8.count)
+            range: NSRange(depsContent.startIndex..<depsContent.endIndex, in: depsContent)
         ) ?? []
 
         for match in matches {
@@ -235,7 +237,7 @@ public struct PbxprojParser {
             let idMatches = idRegex?.matches(
                 in: arrayContent,
                 options: [],
-                range: NSRange(location: 0, length: arrayContent.utf8.count)
+                range: NSRange(arrayContent.startIndex..<arrayContent.endIndex, in: arrayContent)
             ) ?? []
 
             for idMatch in idMatches {
@@ -261,7 +263,7 @@ public struct PbxprojParser {
         guard let match = regex?.firstMatch(
             in: content,
             options: [],
-            range: NSRange(location: 0, length: content.utf8.count)
+            range: NSRange(content.startIndex..<content.endIndex, in: content)
         ), let range = Range(match.range(at: 1), in: content) else {
             return nil
         }
@@ -286,7 +288,7 @@ public struct PbxprojParser {
         guard let match = parenRegex?.firstMatch(
             in: keyContent,
             options: [],
-            range: NSRange(location: 0, length: keyContent.utf8.count)
+            range: NSRange(keyContent.startIndex..<keyContent.endIndex, in: keyContent)
         ), let range = Range(match.range(at: 1), in: keyContent) else {
             return []
         }
@@ -299,7 +301,7 @@ public struct PbxprojParser {
         let matches = regex?.matches(
             in: arrayContent,
             options: [],
-            range: NSRange(location: 0, length: arrayContent.utf8.count)
+            range: NSRange(arrayContent.startIndex..<arrayContent.endIndex, in: arrayContent)
         ) ?? []
 
         var values: [String] = []
@@ -323,7 +325,7 @@ public struct PbxprojParser {
               let match = regex.firstMatch(
                 in: content,
                 options: [],
-                range: NSRange(location: 0, length: content.utf8.count)
+                range: NSRange(content.startIndex..<content.endIndex, in: content)
               ),
               let matchRange = Range(match.range(at: 0), in: content) else {
             return nil

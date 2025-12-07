@@ -29,10 +29,6 @@ import Foundation
 /// }
 /// ```
 public struct ImportAnalyzer {
-    /// Import pattern to match import statements: matches "import ModuleName"
-    /// Pattern: `import\s+([A-Za-z0-9_]+)` captures the module name
-    private let importPattern = #"import\s+([A-Za-z0-9_]+)"#
-
     public init() {}
 
     /// Analyzes imports in a project directory and returns metrics for each dependency
@@ -147,21 +143,12 @@ public struct ImportAnalyzer {
         var imports: [String: Int] = [:]
         let dependencyNames = Set(dependencies.map { $0.name })
 
-        // Find all import statements
-        let regex = try? NSRegularExpression(pattern: importPattern)
-        let matches = regex?.matches(
-            in: content,
-            options: [],
-            range: NSRange(location: 0, length: content.utf8.count)
-        ) ?? []
+        // Modern Swift Regex: Matches "import" followed by whitespace and an identifier
+        let importRegex = /import\s+([A-Za-z0-9_]+)/
 
-        for match in matches {
-            guard match.numberOfRanges >= 2,
-                  let range = Range(match.range(at: 1), in: content) else {
-                continue
-            }
-
-            let importedModule = String(content[range])
+        for match in content.matches(of: importRegex) {
+            // match.output.1 is the first capture group (the module name)
+            let importedModule = String(match.output.1)
 
             // Check if this import matches one of our dependencies
             if dependencyNames.contains(importedModule) {

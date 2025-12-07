@@ -113,17 +113,25 @@ public struct PackageResolvedParser {
     // MARK: - Private Helper Methods
 
     private func parsePin(_ pin: [String: Any]) -> SPMExternalDependency? {
-        guard let package = pin["package"] as? String,
-              let state = pin["state"] as? [String: Any],
-              let location = state["location"] as? String else {
-            return nil
-        }
+        // v1 format: package, state.location
+        // v2/v3 format: identity, location (top-level), state.version/revision
+        
+        let name = (pin["package"] as? String) ?? (pin["identity"] as? String)
+        
+        guard let packageName = name else { return nil }
+        
+        let state = pin["state"] as? [String: Any] ?? [:]
+        
+        // Location can be top-level (v2/v3) or inside state (v1)
+        let location = (pin["location"] as? String) ?? (state["location"] as? String)
+        
+        guard let packageURL = location else { return nil }
 
         // Determine dependency type
         let dependencyType: SPMDependencySource
-        if location.hasPrefix("http") {
+        if packageURL.hasPrefix("http") {
             dependencyType = .sourceControl
-        } else if location.hasPrefix("binary") {
+        } else if packageURL.hasPrefix("binary") {
             dependencyType = .binary
         } else {
             dependencyType = .registry
@@ -140,10 +148,10 @@ public struct PackageResolvedParser {
         }
 
         return SPMExternalDependency(
-            name: package,
+            name: packageName,
             version: version,
             type: dependencyType,
-            url: location
+            url: packageURL
         )
     }
 

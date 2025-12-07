@@ -7,6 +7,48 @@
       {
         "basedOn" : null,
         "packageRef" : {
+          "identity" : "smitherrorhandling",
+          "kind" : "fileSystem",
+          "location" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithErrorHandling",
+          "name" : "SmithFoundation_ErrorHandling"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithErrorHandling"
+        },
+        "subpath" : "smitherrorhandling"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "smithoutputformatter",
+          "kind" : "fileSystem",
+          "location" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithOutputFormatter",
+          "name" : "SmithFoundation_OutputFormatter"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithOutputFormatter"
+        },
+        "subpath" : "smithoutputformatter"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "smithprogress",
+          "kind" : "fileSystem",
+          "location" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress",
+          "name" : "SmithFoundation_Progress"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-foundation/SmithProgress"
+        },
+        "subpath" : "smithprogress"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
           "identity" : "swift-argument-parser",
           "kind" : "remoteSourceControl",
           "location" : "https://github.com/apple/swift-argument-parser",

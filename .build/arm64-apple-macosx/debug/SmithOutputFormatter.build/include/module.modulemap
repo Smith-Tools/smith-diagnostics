@@ -1,0 +1,3 @@
+module SmithOutputFormatter {
+    header "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithOutputFormatter.build/include/SmithOutputFormatter-Swift.h"
+}

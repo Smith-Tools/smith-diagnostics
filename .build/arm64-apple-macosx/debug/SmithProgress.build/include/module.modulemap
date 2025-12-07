@@ -1,0 +1,3 @@
+module SmithProgress {
+    header "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SmithProgress.build/include/SmithProgress-Swift.h"
+}
