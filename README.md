@@ -21,6 +21,7 @@ Smith Diagnostics is a sophisticated diagnostics engine that goes far beyond bas
 - **Dependency Ranking**: Multi-factor algorithm for intelligent dependency prioritization
 - **Xcode Target Analysis**: Complete parsing of Xcode target dependencies and relationships
 
+
 ## Architecture
 
 ```
@@ -31,7 +32,7 @@ Smith Diagnostics is a sophisticated diagnostics engine that goes far beyond bas
                  │
 ┌────────────────▼─────────────────────────┐
 │   Specialist Analysis Tools              │
-│   (smith-parser, smith-xcsift, smith-spmsift)│
+│   (smith-parser, smith-tca-trace)        │
 └────────────────┬─────────────────────────┘
                  │
 ┌────────────────▼─────────────────────────┐
@@ -164,8 +165,6 @@ Smith Diagnostics depends on the Smith Foundation libraries:
 
 **Core dependency for:**
 - **smith-parser**: Used for structured build output parsing
-- **smith-xcsift**: Xcode-specific diagnostics
-- **smith-spmsift**: SPM-specific diagnostics
 - **Smith CLI**: Orchestration and unified interface
 - **smith-tca-trace**: TCA-specific tracing and validation
 - **smith-validation**: Architectural validation
