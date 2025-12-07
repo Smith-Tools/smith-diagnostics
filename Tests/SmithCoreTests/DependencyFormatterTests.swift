@@ -1,5 +1,5 @@
 import XCTest
-@testable import SmithBuildAnalysis
+@testable import SBDiagnostics
 
 final class DependencyFormatterTests: XCTestCase {
 

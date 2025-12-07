@@ -95,7 +95,7 @@ public struct ProjectDetector {
     }
 
     private static func findWorkspace(at url: URL) -> String? {
-        let workspaces = findFiles(withExtension: "xcworkspace", in: url)
+        let workspaces = findDirectories(withExtension: "xcworkspace", in: url)
         if let fullPath = workspaces.first {
             // Extract just the workspace name from the full path
             let workspaceURL = URL(fileURLWithPath: fullPath)
@@ -105,7 +105,7 @@ public struct ProjectDetector {
     }
 
     private static func findProject(at url: URL) -> String? {
-        let projects = findFiles(withExtension: "xcodeproj", in: url)
+        let projects = findDirectories(withExtension: "xcodeproj", in: url)
         if let fullPath = projects.first {
             // Extract just the project name from the full path
             let projectURL = URL(fileURLWithPath: fullPath)

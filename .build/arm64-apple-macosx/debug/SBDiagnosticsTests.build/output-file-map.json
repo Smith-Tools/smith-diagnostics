@@ -9,6 +9,13 @@
     "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.swiftdeps",
     "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.dia"
   },
+  "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/ProjectDetectorTests.swift": {
+    "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.d",
+    "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.swift.o",
+    "swiftmodule": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.swiftdeps",
+    "diagnostics": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.dia"
+  },
   "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/SmithCoreTests.swift": {
     "dependencies": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.d",
     "object": "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.swift.o",

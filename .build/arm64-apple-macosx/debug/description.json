@@ -15,8 +15,8 @@
     }
   },
   "generatedSourceTargetSet" : [
-    "GenerateDoccReference",
-    "GenerateManual"
+    "GenerateManual",
+    "GenerateDoccReference"
   ],
   "pluginDescriptions" : [
     {
@@ -1737,6 +1737,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/ProjectDetectorTests.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/SmithCoreTests.swift"
         },
         {
@@ -1757,6 +1761,7 @@
       "moduleOutputPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules/SBDiagnosticsTests.swiftmodule",
       "objects" : [
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.swift.o",
+        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.swift.o",
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.swift.o"
       ],
       "otherArguments" : [
@@ -1821,6 +1826,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/SmithCoreTests.swift.o"
         },
         {
@@ -1831,6 +1840,7 @@
       "prepareForIndexing" : false,
       "sources" : [
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/DependencyFormatterTests.swift",
+        "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/ProjectDetectorTests.swift",
         "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/SmithCoreTests.swift"
       ],
       "tempsPath" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build",
@@ -3249,6 +3259,7 @@
       "smith_diagnostics",
       "-c",
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/DependencyFormatterTests.swift",
+      "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/ProjectDetectorTests.swift",
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/SmithCoreTests.swift",
       "-I",
       "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/Modules",
@@ -4132,6 +4143,10 @@
         {
           "kind" : "file",
           "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/DependencyFormatterTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/Tests/SmithCoreTests/ProjectDetectorTests.swift"
         },
         {
           "kind" : "file",
@@ -5902,6 +5917,10 @@
         {
           "kind" : "file",
           "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/DependencyFormatterTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/Plutonian/_Developer/Smith-Tools/smith-diagnostics/.build/arm64-apple-macosx/debug/SBDiagnosticsTests.build/ProjectDetectorTests.swift.o"
         },
         {
           "kind" : "file",
